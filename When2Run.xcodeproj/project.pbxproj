@@ -24,6 +24,7 @@
 		45A456C42A220AE600068BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45A456C62A220AE600068BD0 /* When2Run.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = When2Run.entitlements; sourceTree = "<group>"; };
 		45A456C82A220AE600068BD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		45A456D02A28478500068BD0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 		45A456AF2A220AE400068BD0 = {
 			isa = PBXGroup;
 			children = (
+				45A456D02A28478500068BD0 /* README.md */,
 				45A456CF2A220E2700068BD0 /* Persistence */,
 				45A456BA2A220AE400068BD0 /* When2Run */,
 				45A456B92A220AE400068BD0 /* Products */,
