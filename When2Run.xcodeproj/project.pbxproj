@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		45912CED2A448DCF00C5E104 /* 🏃🕰️💰.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45912CEC2A448DCF00C5E104 /* 🏃🕰️💰.swift */; };
+		45912CF02A44B8EA00C5E104 /* 😃.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45912CEF2A44B8EA00C5E104 /* 😃.swift */; };
 		45A456BC2A220AE400068BD0 /* When2RunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A456BB2A220AE400068BD0 /* When2RunApp.swift */; };
 		45A456BE2A220AE400068BD0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A456BD2A220AE400068BD0 /* Persistence.swift */; };
 		45A456C12A220AE400068BD0 /* When2Run.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45A456BF2A220AE400068BD0 /* When2Run.xcdatamodeld */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		45912CEC2A448DCF00C5E104 /* 🏃🕰️💰.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🏃🕰️💰.swift"; sourceTree = "<group>"; };
+		45912CEF2A44B8EA00C5E104 /* 😃.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "😃.swift"; sourceTree = "<group>"; };
 		45A456B82A220AE400068BD0 /* When2Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = When2Run.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A456BB2A220AE400068BD0 /* When2RunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = When2RunApp.swift; sourceTree = "<group>"; };
 		45A456BD2A220AE400068BD0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		45912CEA2A448D7700C5E104 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				45912CEE2A44B8D000C5E104 /* Utils */,
 				45912CEB2A448D8000C5E104 /* Component */,
 			);
 			path = Shared;
@@ -54,6 +57,14 @@
 				45912CEC2A448DCF00C5E104 /* 🏃🕰️💰.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		45912CEE2A44B8D000C5E104 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				45912CEF2A44B8EA00C5E104 /* 😃.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		45A456AF2A220AE400068BD0 = {
@@ -177,6 +188,7 @@
 				45A456C12A220AE400068BD0 /* When2Run.xcdatamodeld in Sources */,
 				45A456BC2A220AE400068BD0 /* When2RunApp.swift in Sources */,
 				45A456C32A220AE400068BD0 /* ContentView.swift in Sources */,
+				45912CF02A44B8EA00C5E104 /* 😃.swift in Sources */,
 				45A456BE2A220AE400068BD0 /* Persistence.swift in Sources */,
 				45912CED2A448DCF00C5E104 /* 🏃🕰️💰.swift in Sources */,
 			);
