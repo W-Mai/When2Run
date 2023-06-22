@@ -12,19 +12,21 @@ struct 🏃🕰️💰: View {
     var 🏃🕰️: Date
     var 💰🕐: Double
     var 😎？: Bool
-    
+
     @State private var 🤑？ = false
     
     var body: some View {
         VStack {
-            let 🕰️ = 😎？ ? 0.01 : 1.0
+            let 🕰️ = 😎？ ? 0.001 : 1.0
             let 📅🔠 = 😎？ ? 🔠🔠🔠.📅😎 : 🔠🔠🔠.📅
             
             TimelineView(.periodic(from: Date(), by: 🕰️)) { context in
+                let 🕰️🔁 = 🧑🏿‍💻🕰️.distance(to: Date())
+                let 🕰️🔄 = Date().distance(to: 🏃🕰️)
+                
                 HStack{
-                    let timeInterval = Date().distance(to: 🏃🕰️)
                     VStack{
-                        Text(📅🔠.string(from: Date(timeIntervalSince1970: timeInterval)))
+                        Text(📅🔠.string(from: Date(timeIntervalSince1970: 🕰️🔁)))
                             .minimumScaleFactor(0.5)
                             .font(.system(size: 32, design: .monospaced)).fontWeight(.black)
                             .frame(maxWidth: .infinity)
@@ -47,7 +49,7 @@ struct 🏃🕰️💰: View {
                             
                             Text(
                                 🤑？
-                                ? 🔠🔠🔠.💲.string(from: NSNumber(value: timeInterval / 3600 * 💰🕐)) ?? ""
+                                ? 🔠🔠🔠.💲.string(from: NSNumber(value: 🕰️🔄 / 3600 * 💰🕐)) ?? ""
                                 : "****"
                             )
                             .lineLimit(1)
@@ -64,7 +66,6 @@ struct 🏃🕰️💰: View {
                 }
                 Spacer()
                 HStack{
-                    let timeInterval = 🧑🏿‍💻🕰️.distance(to: Date())
                     Button {
                         print("hello")
                     } label: {
@@ -76,7 +77,7 @@ struct 🏃🕰️💰: View {
                     }
                     Spacer()
                     VStack{
-                        Text(📅🔠.string(from: Date(timeIntervalSince1970: timeInterval)))
+                        Text(📅🔠.string(from: Date(timeIntervalSince1970: 🕰️🔄)))
                             .foregroundColor(Color(UIColor.systemGray2))
                             .font(.system(size: 12, design: .monospaced))
                             .fontWeight(.black)
@@ -98,10 +99,10 @@ struct 🏃🕰️💰: View {
 }
 
 struct 🏃🕰️💰_Previews: View, PreviewProvider {
-    @State var 🧑🏿‍💻🕰️: Date = Date()
-    @State var 🏃🕰️: Date = Date()
+    @State var 🧑🏿‍💻🕰️: Date = 👈🕐📅(8, 0)
+    @State var 🏃🕰️: Date = 👈🕐📅(19, 30)
     @State var 😎？: Bool = false
-    
+
     var body: some View {
         VStack {
             Toggle(isOn: $😎？) {

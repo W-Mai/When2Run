@@ -28,3 +28,13 @@ struct 🔠🔠🔠 {
         return 🔠
     }()
 }
+
+func 👈🕐📅(_ 🕐: Int, _ 🕜: Int) -> Date {
+    let calendar = Calendar.current
+    
+    var components = calendar.dateComponents([.year, .month, .day], from: Date())
+    components.hour = 🕐
+    components.minute = 🕜
+    
+    return calendar.date(from: components)!
+}
