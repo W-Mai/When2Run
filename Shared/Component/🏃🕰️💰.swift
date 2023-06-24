@@ -12,7 +12,9 @@ struct 🏃🕰️💰: View {
     var 🏃🕰️: Date
     var 💰🕐: Double
     var 😎？: Bool
-
+    
+    var 🔬📦: (() -> Void)? = nil
+    
     @State private var 🤑？ = false
     
     var body: some View {
@@ -26,10 +28,13 @@ struct 🏃🕰️💰: View {
                 
                 HStack{
                     VStack{
-                        Text(📅🔠.string(from: Date(timeIntervalSince1970: 🕰️🔁)))
-                            .minimumScaleFactor(0.5)
-                            .font(.system(size: 32, design: .monospaced)).fontWeight(.black)
-                            .frame(maxWidth: .infinity)
+                        Text(📅🔠.string(from: Date(timeIntervalSince1970:
+                                                        abs(🕰️🔄)
+                                                   )))
+                        .minimumScaleFactor(0.5)
+                        .font(.system(size: 32, design: .monospaced))
+                        .fontWeight(.black)
+                        .frame(maxWidth: .infinity)
                     }
                     .frame(maxHeight: .infinity)
                     .padding(.vertical)
@@ -49,7 +54,7 @@ struct 🏃🕰️💰: View {
                             
                             Text(
                                 🤑？
-                                ? 🔠🔠🔠.💲.string(from: NSNumber(value: 🕰️🔄 / 3600 * 💰🕐)) ?? ""
+                                ? 🔠🔠🔠.💲.string(from: NSNumber(value: 🕰️🔁 / 3600 * 💰🕐)) ?? ""
                                 : "****"
                             )
                             .lineLimit(1)
@@ -66,21 +71,23 @@ struct 🏃🕰️💰: View {
                 }
                 Spacer()
                 HStack{
-                    Button {
-                        print("hello")
-                    } label: {
-                        Image(systemName: "gear")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 25)
-                            .foregroundColor(.black)
+                    if 🔬📦 != nil {
+                        Button {
+                            🔬📦?()
+                        } label: {
+                            Image(systemName: "gear")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 25)
+                                .foregroundColor(.black)
+                        }
                     }
                     Spacer()
                     VStack{
-                        Text(📅🔠.string(from: Date(timeIntervalSince1970: 🕰️🔄)))
-                            .foregroundColor(Color(UIColor.systemGray2))
+                        Text(📅🔠.string(from: Date(timeIntervalSince1970: 🕰️🔁)))
                             .font(.system(size: 12, design: .monospaced))
                             .fontWeight(.black)
+                            .foregroundColor(🕰️🔄 < 0 ? Color.red : Color(UIColor.systemGray2))
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 6)
@@ -99,10 +106,12 @@ struct 🏃🕰️💰: View {
 }
 
 struct 🏃🕰️💰_Previews: View, PreviewProvider {
-    @State var 🧑🏿‍💻🕰️: Date = 👈🕐📅(8, 0)
+    @State var 🧑🏿‍💻🕰️: Date = 👈🕐📅(18, 0)
+        .advanced(by: -24 * 3600)
     @State var 🏃🕰️: Date = 👈🕐📅(19, 30)
+        .advanced(by: -24 * 3600)
     @State var 😎？: Bool = false
-
+    
     var body: some View {
         VStack {
             Toggle(isOn: $😎？) {
@@ -110,8 +119,10 @@ struct 🏃🕰️💰_Previews: View, PreviewProvider {
             }
             DatePicker("🧑🏿‍💻🕰️", selection: $🧑🏿‍💻🕰️, displayedComponents: .hourAndMinute)
             DatePicker("🏃🕰️", selection: $🏃🕰️, displayedComponents: .hourAndMinute)
-            🏃🕰️💰(🧑🏿‍💻🕰️: 🧑🏿‍💻🕰️, 🏃🕰️: 🏃🕰️, 💰🕐: 100.0,😎？: 😎？)
-        }
+            🏃🕰️💰(🧑🏿‍💻🕰️: 🧑🏿‍💻🕰️, 🏃🕰️: 🏃🕰️, 💰🕐: 100.0,😎？: 😎？, 🔬📦: {
+                print("hello")
+            })
+        }.frame(maxWidth: 400)
     }
     
     static var previews: some View {

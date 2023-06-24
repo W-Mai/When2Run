@@ -17,6 +17,7 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     var body: some View {
+        🏃🕰️💰_Previews()
         NavigationView {
             List {
                 ForEach(items) { item in
