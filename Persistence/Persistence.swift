@@ -8,15 +8,40 @@
 import CoreData
 
 struct PersistenceController {
-    static let shared = PersistenceController()
+    static let shared : PersistenceController =  {
+        let result = PersistenceController(inMemory: true)
+        let viewContext = result.container.viewContext
+        let newJobConf = JobConf(context: viewContext)
+        
+        let date = Date.fromHourMinute(1, 0).toHourMinute()
+        LOG.debug("\(date)")
+        LOG.error("\(date)")
+        LOG.info("\(date)")
+        LOG.warning("\(date)")
+        LOG.trace("\(date)")
+        LOG.notice("\(date)")
+        LOG.critical("\(date)")
+        LOG.fault("\(date)")
+        LOG.log("\(date)")
+        
+        
+//        do {
+//            try viewContext.save()
+//        } catch {
+//            // Replace this implementation with code to handle the error appropriately.
+//            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+//            let nsError = error as NSError
+//            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+//        }
+        return result
+    }()
 
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
+        let newJobConf = JobConf(context: viewContext)
+        
+
         do {
             try viewContext.save()
         } catch {
@@ -53,4 +78,22 @@ struct PersistenceController {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
+    
+    static func jobConfCount(_ context: NSManagedObjectContext) -> Int {
+        let request: NSFetchRequest<NSFetchRequestResult> = JobConf.fetchRequest()
+
+        do {
+            let count = try context.count(for: request)
+            return count
+        } catch {
+            LOG.error("Error fetching objects: \(error)")
+            return 0
+        }
+    }
+}
+
+extension JobConf {
+    
+
+    
 }

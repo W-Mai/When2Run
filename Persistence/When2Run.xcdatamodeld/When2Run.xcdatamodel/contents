@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="JobConf" representedClassName="JobConf" syncable="YES" codeGenerationType="class">
+        <attribute name="breakTime" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="fixedEndTime" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="fixedStartTime" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="shiftEndTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="shiftStartTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="workHours" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="workSchedule" optional="YES" attributeType="Transformable"/>
     </entity>
-    <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-    </elements>
 </model>

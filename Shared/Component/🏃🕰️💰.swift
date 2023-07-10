@@ -105,11 +105,16 @@ struct 🏃🕰️💰: View {
     }
 }
 
+struct 🀄️🤨 {
+    var 🀄️: Bool
+}
+
 struct 🏃🕰️💰_Previews: View, PreviewProvider {
-    @State var 🧑🏿‍💻🕰️: Date = 👈🕐📅(18, 0)
-        .advanced(by: -24 * 3600)
-    @State var 🏃🕰️: Date = 👈🕐📅(19, 30)
-        .advanced(by: -24 * 3600)
+    @State var 🧑🏿‍💻🕰️: Date = 👈🕐📅(9, 30)
+//        .advanced(by: -24 * 3600)
+    @State var 🏃🕰️: Date = 👈🕐📅(19, 00)
+    
+//        .advanced(by: -24 * 3600)
     @State var 😎？: Bool = false
     
     var body: some View {
@@ -121,6 +126,9 @@ struct 🏃🕰️💰_Previews: View, PreviewProvider {
             DatePicker("🏃🕰️", selection: $🏃🕰️, displayedComponents: .hourAndMinute)
             🏃🕰️💰(🧑🏿‍💻🕰️: 🧑🏿‍💻🕰️, 🏃🕰️: 🏃🕰️, 💰🕐: 100.0,😎？: 😎？, 🔬📦: {
                 print("hello")
+                
+                let 🀄️🤨？ : 🀄️🤨
+                return 🀄️🤨？.🀄️
             })
         }.frame(maxWidth: 400)
     }

@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import OSLog
+
+let LOG = Logger()
 
 @main
 struct When2RunApp: App {
